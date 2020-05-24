@@ -15,8 +15,14 @@ Object bucket[];
 	
 public	void get(int index)
 	{
+	if(index<0 || index>size)
+		throw new ArithmeticException("Wrong index value");
+	else
+	{
 	    Object value=bucket[index];
 	    System.out.println("The value is "+value);
+	    
+	}
 	
 	}
 
@@ -44,11 +50,14 @@ private void increaseSize(Object[] bucket2) {
 
 public void delete(int index)
 {
+	if(index<0 || index>size)
+		throw new ArithmeticException("Wrong index value");
  for(int i=index;i<bucket.length-1;i++)
  {
 	 bucket[i]=bucket[i+1];
  }
  System.out.println("After deletion");
+ --size;
  this.display();
 
 }
