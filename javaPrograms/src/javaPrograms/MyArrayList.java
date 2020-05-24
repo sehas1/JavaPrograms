@@ -1,5 +1,7 @@
 package javaPrograms;
 
+import java.util.Arrays;
+
 public class MyArrayList < E > {
 Object bucket[];
  private int size;
@@ -30,6 +32,11 @@ public void add(E addValue)
 
 private void increaseSize(Object[] bucket2) {
 	// TODO Auto-generated method stub
+	
+	 int newIncreasedCapacity = bucket.length * 2;
+	 bucket = Arrays.copyOf(bucket, newIncreasedCapacity);
+	
+	
 	
 
 }
